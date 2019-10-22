@@ -13,9 +13,12 @@
 		96D2B363235AEC6B00D70DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96D2B361235AEC6B00D70DC5 /* Main.storyboard */; };
 		96D2B365235AEC6D00D70DC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96D2B364235AEC6D00D70DC5 /* Assets.xcassets */; };
 		96D2B368235AEC6D00D70DC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96D2B366235AEC6D00D70DC5 /* LaunchScreen.storyboard */; };
+		CE1BFC71E6EB5EC76991B636 /* Pods_RxPractice0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D70CBE2F58C6F1B9D86D03 /* Pods_RxPractice0.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06D70CBE2F58C6F1B9D86D03 /* Pods_RxPractice0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxPractice0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79ADEC404EF03548F3AA0735 /* Pods-RxPractice0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPractice0.release.xcconfig"; path = "Target Support Files/Pods-RxPractice0/Pods-RxPractice0.release.xcconfig"; sourceTree = "<group>"; };
 		96D2B358235AEC6B00D70DC5 /* RxPractice0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPractice0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D2B35B235AEC6B00D70DC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96D2B35D235AEC6B00D70DC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		96D2B364235AEC6D00D70DC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96D2B367235AEC6D00D70DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96D2B369235AEC6D00D70DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7B4C0C6157A0D256F06DC2D /* Pods-RxPractice0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPractice0.debug.xcconfig"; path = "Target Support Files/Pods-RxPractice0/Pods-RxPractice0.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1BFC71E6EB5EC76991B636 /* Pods_RxPractice0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36776F6BA352CB96BED1E308 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7B4C0C6157A0D256F06DC2D /* Pods-RxPractice0.debug.xcconfig */,
+				79ADEC404EF03548F3AA0735 /* Pods-RxPractice0.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		96D2B34F235AEC6B00D70DC5 = {
 			isa = PBXGroup;
 			children = (
 				96D2B35A235AEC6B00D70DC5 /* RxPractice0 */,
 				96D2B359235AEC6B00D70DC5 /* Products */,
+				36776F6BA352CB96BED1E308 /* Pods */,
+				FB8B4FB6E2988B7F6E47E2EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = RxPractice0;
 			sourceTree = "<group>";
 		};
+		FB8B4FB6E2988B7F6E47E2EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06D70CBE2F58C6F1B9D86D03 /* Pods_RxPractice0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96D2B36C235AEC6D00D70DC5 /* Build configuration list for PBXNativeTarget "RxPractice0" */;
 			buildPhases = (
+				880A120F586A4C95361EEF1B /* [CP] Check Pods Manifest.lock */,
 				96D2B354235AEC6B00D70DC5 /* Sources */,
 				96D2B355235AEC6B00D70DC5 /* Frameworks */,
 				96D2B356235AEC6B00D70DC5 /* Resources */,
+				FBB21BC2796DA78D0D80BAE9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		880A120F586A4C95361EEF1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxPractice0-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBB21BC2796DA78D0D80BAE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxPractice0/Pods-RxPractice0-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxPractice0/Pods-RxPractice0-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxPractice0/Pods-RxPractice0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96D2B354235AEC6B00D70DC5 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		96D2B36D235AEC6D00D70DC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7B4C0C6157A0D256F06DC2D /* Pods-RxPractice0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		96D2B36E235AEC6D00D70DC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79ADEC404EF03548F3AA0735 /* Pods-RxPractice0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
