@@ -81,24 +81,23 @@ class ViewController: UIViewController {
         
         // メンバ変数: lastSelectedGreetingにボタンのタイトル名を渡す
         // (subscribe)イベントが発生した場合にイベントのステータスに応じて処理を行う
-        /*
         greetingButton.rx.tap.subscribe(onNext: { (nothing: Void) in
             let buttonTitle = self.greetingButton.currentTitle
-            self.lastSelectedGreeting.value = buttonTitle!
-            // let testTitle = self.greetingButton.currentTitle!
-            // self.greetingButton.currentTitle = title
-        }).addDisposableTo(disposeBag)
-         */
+            self.lastSelectedGreeting.accept(buttonTitle!)
+        }).disposed(by: disposeBag)
         /* ボタンに関する処理 END */
+        
+        // 挨拶の表示ラベルにおいて、テキスト表示のイベントを観測対象にする
+        let predefinedGreetingObservable: Observable<String> = lastSelectedGreeting.asObservable()
         
         // 最終的な挨拶文章のイベント
         // (combineLatest)現在入力ないしは選択がされている項目を全て結合する
-        let finalGreetingObservable: Observable<String> = Observable.combineLatest(stateObservable, freeObservable, nameObservable) { (state: State, freeword: String?, name: String?) -> String in
+        let finalGreetingObservable: Observable<String> = Observable.combineLatest(stateObservable, freeObservable, nameObservable, predefinedGreetingObservable) { (state: State, freeword: String?, name: String?, predefinedGreeting: String) -> String in
             switch state {
                 case .useTextField:
                     return freeword! + name!
                 case .useButton:
-                    return "こんにちは！" + name!
+                    return predefinedGreeting + name!
             }
         }
         
